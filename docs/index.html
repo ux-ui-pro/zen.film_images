@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>main</title>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/app.min.css">
+	<style>
+		.layout {
+			padding: 30px;
+		}
+
+		h4 {
+			margin-top: 70px;
+		}
+
+		figure {
+			margin: 0;
+		}
+	</style>
+</head>
+<body class="is-about-page">
+<div id="app" class="layout">
+<main role="main" class="main">
+
+	<h4>Материалы</h4>
+
+	<ol>
+		<li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images</a></li>
+		<li><a href="https://observablehq.com/@eeeps/w-descriptors-and-sizes-under-the-hood">observablehq.com/@eeeps/w-descriptors-and-sizes-under-the-hood</a></li>
+		<li><a href="https://paulcalvano.com/2019-01-11-correlating-performance-metrics-to-page-characteristics/">paulcalvano.com/2019-01-11-correlating-performance-metrics-to-page-characteristics/</a></li>
+		<li><a href="https://www.filamentgroup.com/lab/sizes-swap/">www.filamentgroup.com/lab/sizes-swap/</a></li>
+		<li><a href="https://almanac.httparchive.org/en/2019/media#use-of-html-markup">almanac.httparchive.org/en/2019/media#use-of-html-markup</a></li>
+		<li><a href="https://alistapart.com/article/responsive-images-in-practice/#section4">alistapart.com/article/responsive-images-in-practice/#section4</a></li>
+		<li><a href="https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/">css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/</a></li>
+		<li><a href="https://css-tricks.com/sometimes-sizes-is-quite-important/">css-tricks.com/sometimes-sizes-is-quite-important/</a></li>
+		<li><a href="https://habr.com/ru/company/ruvds/blog/500292/">habr.com/ru/company/ruvds/blog/500292/</a></li>
+	</ol>
+
+	<h4>Article [300×auto, 960×auto, 1380×auto, 1750×auto, 2048×auto]</h4>
+
+<pre><code>&lt;div class=&quot;image-container&quot;&gt;
+	&lt;figure&gt;
+		&lt;img sizes=&quot;(max-width: 900px) 100vw, 900px&quot;
+			srcset=&quot;/img/article,w_300.webp 300w,
+				/img/article,w_960.webp 960w,
+				/img/article,w_1380.webp 1380w,
+				/img/article,w_1750.webp 1750w,
+				/img/article,w_2048.webp 2048w&quot;
+			src=&quot;/img/article,w_2048.webp&quot;
+			loading=&quot;lazy&quot;
+			decoding=&quot;async&quot;
+			alt=&quot;&quot;&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+
+	<div class="image-container" style="width: 900px;">
+		<figure>
+			<img sizes="(max-width: 900px) 100vw, 900px"
+					srcset="/img/article,w_300.webp 300w,
+						/img/article,w_960.webp 960w,
+						/img/article,w_1380.webp 1380w,
+						/img/article,w_1750.webp 1750w,
+						/img/article,w_2048.webp 2048w"
+					src="/img/article,w_2048.webp"
+					loading="lazy"
+					decoding="async"
+					alt="">
+		</figure>
+	</div>
+
+	<h4>Poster [300×auto, 460×auto, 600×auto]</h4>
+
+<pre><code>&lt;div class=&quot;image-container&quot;&gt;
+	&lt;img srcset=&quot;/img/poster,w_300.webp 1x,
+			/img/poster,w_420.webp 2x,
+			/img/poster,w_600.webp 3x&quot;
+		src=&quot;/img/poster,w_600.webp&quot;
+		loading=&quot;lazy&quot;
+		decoding=&quot;async&quot;
+		alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+	<div class="image-container" style="width: 200px;">
+		<img srcset="/img/poster,w_300.webp 1x,
+					 /img/poster,w_420.webp 2x,
+					 /img/poster,w_600.webp 3x"
+			src="/img/poster,w_600.webp"
+			loading="lazy"
+			decoding="async"
+			alt="">
+	</div>
+
+	<h4>Frame [300×auto, 520×auto, 1040×auto]</h4>
+
+<pre><code>&lt;div class=&quot;image-container&quot;&gt;
+	&lt;img srcset=&quot;/img/frame,w_300.webp 1x,
+			/img/frame,w_520.webp 2x,
+			/img/frame,w_1040.webp 3x&quot;
+		src=&quot;/img/frame,w_1040.webp&quot;
+		loading=&quot;lazy&quot;
+		decoding=&quot;async&quot;
+		alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+	<div class="image-container" style="width: 200px;">
+		<img srcset="/img/frame,w_300.webp 1x,
+					 /img/frame,w_520.webp 2x,
+					 /img/frame,w_1040.webp 3x"
+			src="/img/frame,w_1040.webp"
+			loading="lazy"
+			decoding="async"
+			alt="">
+	</div>
+
+	<h4>Avatar [60×auto, 120×auto, 240×auto]</h4>
+
+<pre><code>&lt;div class=&quot;image-container&quot;&gt;
+	&lt;img srcset=&quot;/img/avatar,w_60.webp 1x,
+			/img/avatar,w_120.webp 2x,
+			/img/avatar,w_240.webp 3x&quot;
+		src=&quot;/img/avatar,w_240.webp&quot;
+		loading=&quot;lazy&quot;
+		decoding=&quot;async&quot;
+		alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+	<div class="image-container" style="width: 60px;">
+		<img srcset="/img/avatar,w_60.webp 1x,
+					 /img/avatar,w_120.webp 2x,
+					 /img/avatar,w_240.webp 3x"
+				src="/img/avatar,w_240.webp"
+				loading="lazy"
+				decoding="async"
+				alt="">
+	</div>
+
+	<h4>Photo [280×auto, 460×auto, 600×auto]</h4>
+
+<pre><code>&lt;div class=&quot;image-container&quot; style=&quot;width: 280px;&quot;&gt;
+	&lt;img srcset=&quot;/img/photo,w_280.webp 1x,
+			/img/photo,w_460.webp 2x,
+			/img/photo,w_600.webp 3x&quot;
+		src=&quot;/img/photo,w_600.webp&quot;
+		loading=&quot;lazy&quot;
+		decoding=&quot;async&quot;
+		alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+	<div class="image-container" style="width: 280px;">
+		<img srcset="/img/photo,w_280.webp 1x,
+					/img/photo,w_460.webp 2x,
+					/img/photo,w_600.webp 3x"
+				src="/img/photo,w_600.webp"
+				loading="lazy"
+				decoding="async"
+				alt="">
+	</div>
+
+</main>
+</div>
+<script src="/js/app.min.js"></script>
+</body>
+</html>
